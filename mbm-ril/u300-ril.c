@@ -408,7 +408,7 @@ static void processRequest(int request, void *data, size_t datalen, RIL_Token t)
              request == RIL_REQUEST_ENTER_SIM_PIN2 ||
              request == RIL_REQUEST_ENTER_SIM_PUK2 ||
 #ifdef MBM_CM
-             request == RIL_REQUEST_ENTER_DEPERSONALIZATION_CODE
+             request == RIL_REQUEST_ENTER_DEPERSONALIZATION_CODE ||
 #else
              request == RIL_REQUEST_ENTER_NETWORK_DEPERSONALIZATION ||
 #endif /* MBM_CM */
