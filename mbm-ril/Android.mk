@@ -38,6 +38,9 @@ ifneq "$(findstring $(PLATFORM_SDK_VERSION), $(API_ICS))" ""
   $(warning MBM RIL: Ice Cream Sandwich is set: $(MBM_ICS))
 endif
 
+# Add CyanogenMod 11.0 specific condition
+MBM_CM:= true
+
 LOCAL_SRC_FILES:= \
     u300-ril.c \
     u300-ril-config.h \
@@ -93,6 +96,9 @@ LOCAL_CFLAGS += -DRIL_SHLIB
 LOCAL_CFLAGS += -Wall
 ifdef MBM_ICS
 LOCAL_CFLAGS += -DMBM_ICS
+endif
+ifdef MBM_CM
+LOCAL_CFLAGS += -DMBM_CM
 endif
 LOCAL_MODULE:= libmbm-ril
 include $(BUILD_SHARED_LIBRARY)
