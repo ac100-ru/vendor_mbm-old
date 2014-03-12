@@ -89,6 +89,12 @@ static void dummyResponse(void);
 #define responseGsmBrSmsCnf dummyResponse
 #define responseCdmaBrSmsCnf dummyResponse
 
+/* Android 4.3 new functions */
+#define responseCellInfoList dummyResponse
+#define responseGetDataCallProfile dummyResponse
+#define responseUiccSubscription dummyResponse
+/* end 4.3 */
+
 #define dispatchDataCall dispatchStrings
 #define responseSetupDataCall responseStrings
 
